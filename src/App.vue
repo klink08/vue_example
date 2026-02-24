@@ -1,10 +1,9 @@
 <script setup>
-import { useUserStore } from "@/stores/user.js";
-import Header from "@/components/Header.vue";
-import Dashboard from "@/components/Dashboard.vue";
+import { useUserStore } from '@/stores/user.js'
+import Header from '@/components/Header.vue'
+import Dashboard from '@/components/dashboard/index.vue'
 
-const userStore = useUserStore();
-
+const userStore = useUserStore()
 </script>
 
 <template>
