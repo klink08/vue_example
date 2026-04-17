@@ -13,9 +13,9 @@ onMounted(async () => {
 <template>
   <main>
     <IconVueLogo />
-    <div>{{ userStore.firstName }}</div>
-    <div>{{ userStore.lastName }}</div>
-    <div>{{ userStore.fullName }}</div>
+    <div>First Name: {{ userStore.firstName }}</div>
+    <div>Last Name: {{ userStore.lastName }}</div>
+    <div>Full Name: {{ userStore.fullName }}</div>
   </main>
 </template>
 

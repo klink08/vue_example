@@ -14,7 +14,7 @@ npm run coverage   # Run tests with coverage report
 
 To run a single test file:
 ```bash
-npx vitest run src/components/dashboard/__test__/dashboard.spec.js
+npx vitest run src/components/dashboard/__test__/header.spec.js
 ```
 
 Node version is pinned to v24.1.0 via `.nvmrc`.
