@@ -1,0 +1,5 @@
+@layer components {
+    .hint {
+        @apply font-serif text-xs font-light tracking-tight
+    }
+}

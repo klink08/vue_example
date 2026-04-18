@@ -1,43 +1,15 @@
-<script setup>
-import { useUserStore } from '@/stores/user.js'
-import Header from '@/components/header/Header.vue'
-import Dashboard from '@/components/dashboard/Dashboard.vue'
-
-const userStore = useUserStore()
-</script>
+<script setup></script>
 
 <template>
+  <h1>Vue Router</h1>
+  <p><strong>Current route path:</strong> {{ $route.fullPath }}</p>
+  <nav>
+    <RouterLink to="/">Go to Home</RouterLink>
+    <RouterLink to="/secondary">Go to Secondary</RouterLink>
+  </nav>
   <main>
-    <Header />
-    <Dashboard />
+    <RouterView />
   </main>
 </template>
 
-<style scoped>
-header {
-  line-height: 1.5;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-}
-</style>
+<style scoped></style>

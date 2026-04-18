@@ -1,9 +1,18 @@
 <script setup>
+// Libraries
 import { onMounted } from 'vue'
-import { useUserStore } from '@/stores/user.js'
+
+// Components
 import IconVueLogo from '@/icons/IconVueLogo.vue'
 
+// Stores
+import { useUserStore } from '@/stores/user.js'
+
 const userStore = useUserStore()
+
+const goToHome = () => {
+  this.$router.push('/home')
+}
 
 onMounted(async () => {
   await userStore.fetchUser()
@@ -16,6 +25,7 @@ onMounted(async () => {
     <div>First Name: {{ userStore.firstName }}</div>
     <div>Last Name: {{ userStore.lastName }}</div>
     <div>Full Name: {{ userStore.fullName }}</div>
+    <button onClick="goToHome">Go to Home</button>
   </main>
 </template>
 
