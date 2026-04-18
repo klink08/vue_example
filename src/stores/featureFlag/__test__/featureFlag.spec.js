@@ -3,7 +3,7 @@ import { describe, beforeEach, it, expect } from 'vitest'
 import { createPinia, setActivePinia } from 'pinia'
 
 // Stores
-import { useFeatureFlagsStore } from '@/stores/featureFlag/featureFlag.js'
+import { useFeatureFlagStore } from '@/stores/featureFlag/featureFlag.js'
 
 describe('Scenario: Feature Flags Store', () => {
   beforeEach(() => {
@@ -14,7 +14,7 @@ describe('Scenario: Feature Flags Store', () => {
     let featureFlagsStore
 
     beforeEach(() => {
-      featureFlagsStore = useFeatureFlagsStore()
+      featureFlagsStore = useFeatureFlagStore()
     })
 
     describe('When: No actions have been called', () => {
