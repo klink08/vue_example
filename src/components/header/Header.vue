@@ -1,11 +1,4 @@
 <script lang="ts" setup>
-// Libraries
-import { onMounted } from 'vue'
-import { useRouter } from 'vue-router'
-
-// Components
-import IconVueLogo from '@/icons/IconVueLogo.vue'
-
 // Stores
 import { useUserStore } from '@/stores/user/user.js'
 
