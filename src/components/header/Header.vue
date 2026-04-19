@@ -13,7 +13,6 @@ const userStore = useUserStore()
 </script>
 
 <template>
-  <IconVueLogo />
   <div>First Name: {{ userStore.firstName }}</div>
   <div>Last Name: {{ userStore.lastName }}</div>
   <div>Full Name: {{ userStore.fullName }}</div>
