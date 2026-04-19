@@ -7,7 +7,7 @@ import tailwindcss from '@tailwindcss/vite'
 import magicalSvgPlugin from 'vite-plugin-magical-svg'
 
 export default defineConfig({
-  base: process.env.NODE_ENV === 'production' ? '/vue_example/' : '/',
+  base: '/',
   plugins: [
     vue(),
     vueDevTools(),
