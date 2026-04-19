@@ -3,8 +3,8 @@
 import { watch } from 'vue'
 
 // Loaders
-import { useUserProfileLoader } from '@/loaders/useUserProfile.vue'
-import { useFeatureFlagsLoader } from '@/loaders/useFeatureFlags.vue'
+import { useUserProfileLoader } from '@/loaders/useUserProfile.js'
+import { useFeatureFlagsLoader } from '@/loaders/useFeatureFlags.js'
 
 // Stores
 import { useUserStore } from '@/stores/user/user.js'
