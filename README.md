@@ -28,6 +28,28 @@ nvm use       # switch to the pinned Node version
 npm install
 ```
 
+## Architecture
+
+### Data Flow
+
+Data is fetched during navigation using Vue Router 5's data loader feature and Pinia Colada's `defineColadaLoader` (imported from `vue-router/experimental/pinia-colada`). Loaders are defined in `src/loaders/` and exported from the page component that uses them — this is required for the router to run them before the page renders.
+
+On the Home page (`src/pages/Home.vue`), two loaders run in parallel during navigation:
+
+- `useUserProfileLoader` — calls `src/api/userProfile.js` to fetch the user's first and last name
+- `useFeatureFlagsLoader` — calls `src/api/featureFlags.js` to fetch feature flag values
+
+Once the loader data resolves, `watch` callbacks in `Home.vue` write it into the corresponding Pinia stores:
+
+- `useUserStore` (`src/stores/user/user.js`) — holds `firstName`, `lastName`, and a `fullName` getter; updated via `setUserProfile()`
+- `useFeatureFlagsStore` (`src/stores/featureFlags/featureFlags.js`) — holds a `flags` map and an `isReady` flag; updated via `setAllFlags()`
+
+Child components (`Header`, `Dashboard`) read directly from the Pinia stores — they have no knowledge of the loaders or API layer. Feature flag checks (e.g. `isFeatureFlagEnabled('isDashboardDisplayed')`) control conditional rendering in the page template.
+
+### Plugin Registration Order
+
+`main.js` registers plugins in this order: Pinia → Vue Router → `DataLoaderPlugin`. The `DataLoaderPlugin` must be registered after the router so it can intercept navigation guards.
+
 ## Development
 
 ```sh
