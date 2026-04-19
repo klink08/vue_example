@@ -59,7 +59,7 @@ describe('Scenario: Header', () => {
       })
 
       it('Then: The router navigates to /home', () => {
-        expect(mockPush).toHaveBeenCalledWith('/home')
+        expect(mockPush).toHaveBeenCalledWith('/vue_example')
       })
     })
   })

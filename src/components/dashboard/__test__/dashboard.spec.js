@@ -35,7 +35,7 @@ describe('Scenario: Dashboard', () => {
       })
 
       it('Then: The router navigates to /secondary', () => {
-        expect(mockPush).toHaveBeenCalledWith('/secondary')
+        expect(mockPush).toHaveBeenCalledWith('/vue_example/secondary')
       })
     })
   })
