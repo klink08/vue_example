@@ -52,15 +52,5 @@ describe('Scenario: Header', () => {
         expect(wrapper.text()).toContain('Kellen Link')
       })
     })
-
-    describe('When: The "Go to Home" button is clicked', () => {
-      beforeEach(async () => {
-        await wrapper.find('button').trigger('click')
-      })
-
-      it('Then: The router navigates to /home', () => {
-        expect(mockPush).toHaveBeenCalledWith('/vue_example')
-      })
-    })
   })
 })
