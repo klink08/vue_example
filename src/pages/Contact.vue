@@ -15,6 +15,11 @@ const links = [
     value: 'visualCV',
     href: 'https://my.visualcv.com/kellen-link/',
   },
+  {
+    label: 'GitHub',
+    value: 'github.com/klink08',
+    href: 'https://github.com/klink08',
+  },
   { label: 'Location', value: 'Columbus, Ohio', href: null },
 ]
 </script>
